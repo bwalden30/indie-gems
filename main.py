@@ -6,24 +6,32 @@ from groq import Groq
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 def fetch_hidden_gems():
     print("Scanning Steam for real hidden gems...")
-    # We search for 'indie' games using Steam's public store search API
+    # Added a User-Agent to trick Steam into thinking we are a real browser
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
     search_url = "https://store.steampowered.com/api/storesearch/?term=indie&l=english&cc=US"
     
     try:
-        response = requests.get(search_url)
+        response = requests.get(search_url, headers=headers)
         response.raise_for_status()
         data = response.json()
         
         if data.get("success") == 1:
             games = data.get("items", [])
-            # We take the first 5 games from the search results as our "gems"
-            # In a full production version, we would filter by review count here
+            if not games:
+                print("Steam returned success, but no games were found for 'indie'.")
+                return []
+            
+            print(f"Found {len(games)} potential gems!")
             return [{
                 "id": game["appid"],
                 "title": game["name"],
-                "tags": ["Indie", "Discovery"], # Steam search API doesn't give tags directly
-                "rating": 0.90 # Placeholder rating
+                "tags": ["Indie", "Discovery"],
+                "rating": 0.90
             } for game in games[:5]]
+        else:
+            print(f"Steam API returned success=0. Data: {data}")
             
     except Exception as e:
         print(f"Error fetching from Steam: {e}")
