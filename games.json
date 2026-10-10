@@ -1,1 +1,20 @@
-
+[
+    {
+        "title": "Example Indie 1",
+        "description": "Step into Example Indie\u202f1, a hauntingly atmospheric puzzle game where each secret feels like a whisper carried on the wind\u2014already earning a dazzling 92.0\u202f% positive rating. Will you be the one to unlock the hidden truth that lingers in every shadow?",
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/123456/header.jpg",
+        "url": "https://store.steampowered.com/app/123456"
+    },
+    {
+        "title": "Example Indie 2",
+        "description": "Unlock the hidden depths of Example\u202fIndie\u202f2\u2014an 88\u202f% acclaimed roguelike where each run is a pulse\u2011quickening mystery waiting to be unraveled. Will you survive the hardcore gauntlet and claim the secrets that lurk beyond the final boss?",
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/654321/header.jpg",
+        "url": "https://store.steampowered.com/app/654321"
+    },
+    {
+        "title": "Example Indie 3",
+        "description": "Step into Example Indie 3, the indie hidden gem that has enchanted 95% of players with its story\u2011rich mysteries lurking in every shadow. Will you unravel the enigma before the game drops its breathtaking twist?",
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/987654/header.jpg",
+        "url": "https://store.steampowered.com/app/987654"
+    }
+]
