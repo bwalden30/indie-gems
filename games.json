@@ -1,20 +1,32 @@
 [
     {
-        "title": "Example Indie 1",
-        "description": "Step into Example Indie\u202f1, a hauntingly atmospheric puzzle game where each secret feels like a whisper carried on the wind\u2014already earning a dazzling 92.0\u202f% positive rating. Will you be the one to unlock the hidden truth that lingers in every shadow?",
-        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/123456/header.jpg",
-        "url": "https://store.steampowered.com/app/123456"
+        "title": "Houdini Indie",
+        "description": "Discover the secret world of Houdini Indie\u2014where every twist of fate feels like a live escape act and every puzzle is a hidden portal to the unknown. Grab your copy now and step behind the curtain to reveal a mystery so thrilling it will have everyone talking\u2014and begging for the next trick.",
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/502570/header.jpg",
+        "url": "https://store.steampowered.com/app/502570"
     },
     {
-        "title": "Example Indie 2",
-        "description": "Unlock the hidden depths of Example\u202fIndie\u202f2\u2014an 88\u202f% acclaimed roguelike where each run is a pulse\u2011quickening mystery waiting to be unraveled. Will you survive the hardcore gauntlet and claim the secrets that lurk beyond the final boss?",
-        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/654321/header.jpg",
-        "url": "https://store.steampowered.com/app/654321"
+        "title": "Indie Pogo",
+        "description": "Uncover the secrets of **Indie Pogo**\u2014a hidden gem where every bounce unravels a new twist that keeps you on the edge of your seat. Join the underground movement that\u2019s turning this mysterious adventure into the next viral sensation.",
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/818210/header.jpg",
+        "url": "https://store.steampowered.com/app/818210"
     },
     {
-        "title": "Example Indie 3",
-        "description": "Step into Example Indie 3, the indie hidden gem that has enchanted 95% of players with its story\u2011rich mysteries lurking in every shadow. Will you unravel the enigma before the game drops its breathtaking twist?",
-        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/987654/header.jpg",
-        "url": "https://store.steampowered.com/app/987654"
+        "title": "ATOM RPG: Post-apocalyptic indie game",
+        "description": "ATOM RPG: a hidden gem born from the ashes of a post\u2011apocalyptic wasteland, where every choice fuels a spark of rebellion. Uncover secrets, forge alliances, and rewrite the apocalypse in the most thrilling indie adventure yet.",
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/552620/header.jpg",
+        "url": "https://store.steampowered.com/app/552620"
+    },
+    {
+        "title": "Indie Dream",
+        "description": "Unveil the secret realms of Indie Dream, where every pixel pulses with a portal to an alternate world\u2014only the bravest dare to unlock its hidden heart. Join the underground quest for this underground gem and experience a game that will keep you scrolling, guessing, and dreaming all night long.",
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/612060/header.jpg",
+        "url": "https://store.steampowered.com/app/612060"
+    },
+    {
+        "title": "Super Indie Karts",
+        "description": "Super\u202fIndie\u202fKarts: the hidden gem of kart racing, where every secret track hides a legendary twist waiting to be discovered. Strap in, race through the unknown, and let the mystery ignite your competitive fire.",
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/323670/header.jpg",
+        "url": "https://store.steampowered.com/app/323670"
     }
 ]
