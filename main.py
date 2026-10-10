@@ -27,7 +27,7 @@ def get_ai_description(game):
     prompt = f"Write a 2-sentence viral marketing pitch for a 'Hidden Gem' game called {game['title']}. Tags: {game['tags']}. It has a {game['rating']*100}% positive rating. Make it sound mysterious and exciting."
     
     completion = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="mixtral-8x7b-32768",
         messages=[{"role": "user", "content": prompt}]
     )
     return completion.choices[0].message.content
