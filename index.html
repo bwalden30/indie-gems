@@ -68,6 +68,31 @@
             margin-bottom: 1rem;
         }
 
+        .hero-actions {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-support {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid var(--glass-border);
+            transition: all 0.2s;
+        }
+
+        .btn-support:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--accent);
+        }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -145,11 +170,37 @@
 
         footer {
             margin-top: auto;
-            padding: 3rem;
+            padding: 4rem 2rem;
             text-align: center;
             color: var(--muted);
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
             font-size: 0.9rem;
-            opacity: 0.7;
+            transition: color 0.2s;
+            opacity: 0.8;
+        }
+
+        .social-link:hover {
+            color: var(--accent);
+            opacity: 1;
+        }
+
+        .footer-text {
+            font-size: 0.8rem;
+            opacity: 0.6;
         }
 
         @media (max-width: 600px) {
@@ -164,12 +215,23 @@
         <div class="badge">✨ AI-Powered Discovery</div>
         <h1>💎 Indie Gems</h1>
         <p>We use artificial intelligence to sift through thousands of Steam games to find the high-rated, low-visibility masterpieces you've been missing.</p>
+        
+        <div class="hero-actions">
+            <!-- REPLACE '#' WITH YOUR KO-FI OR BUY ME A COFFEE LINK -->
+            <a href=" https://cash.app/$IndieGems" class="btn-support">☕ Support the Project</a>
+        </div>
     </section>
 
     <div class="grid" id="game-grid"></div>
 
     <footer>
-        &copy; 2026 Indie Gems • Curated by AI for Humans
+        <div class="social-links">
+            <!-- REPLACE '#' WITH YOUR ACTUAL LINKS -->
+            <a href="https://x.com/walden_brodie" class="social-link">Twitter / X</a>
+        </div>
+        <div class="footer-text">
+            &copy; 2026 Indie Gems • Curated by AI for Humans
+        </div>
     </footer>
 
     <script>
@@ -202,4 +264,3 @@
     </script>
 </body>
 </html>
-
