@@ -6,7 +6,6 @@ from groq import Groq
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 def fetch_hidden_gems():
     print("Scanning Steam for real hidden gems...")
-    # Added a User-Agent to trick Steam into thinking we are a real browser
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
     }
@@ -17,21 +16,18 @@ def fetch_hidden_gems():
         response.raise_for_status()
         data = response.json()
         
-        if data.get("success") == 1:
-            games = data.get("items", [])
-            if not games:
-                print("Steam returned success, but no games were found for 'indie'.")
-                return []
-            
+        # FIX: Check if 'items' exists and has content, ignore the 'success' flag
+        games = data.get("items", [])
+        if games:
             print(f"Found {len(games)} potential gems!")
             return [{
-                "id": game["appid"],
+                "id": game["id"], # Changed from 'appid' to 'id' to match the API output
                 "title": game["name"],
                 "tags": ["Indie", "Discovery"],
                 "rating": 0.90
             } for game in games[:5]]
         else:
-            print(f"Steam API returned success=0. Data: {data}")
+            print("Steam returned a response, but no games were found in the items list.")
             
     except Exception as e:
         print(f"Error fetching from Steam: {e}")
