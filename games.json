@@ -1,32 +1,32 @@
 [
     {
         "title": "Houdini Indie",
-        "description": "Step into the shadowy world of **Houdini Indie**, where every door hides a secret and every twist feels like a magician\u2019s final trick. Grab your wand of curiosity and let the game pull your imagination out of the hat\u2014ready to uncover the hidden gem that awaits?",
+        "description": "Unlock the impossible in **Houdini Indie**, where every level feels like a spell\u2011binding escape trick\u2014crafted for players who thrive on mystery and discovery. Dive into this hidden gem and prove that the greatest adventures are the ones that slip through the cracks of ordinary play.",
         "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/502570/header.jpg",
         "url": "https://store.steampowered.com/app/502570"
     },
     {
         "title": "Indie Pogo",
-        "description": "Indie Pogo invites you to a world where every bounce hides a new mystery waiting to be solved.  \nAre you ready to uncover the secrets that keep players glued to their screens?",
+        "description": "Dive into the secret world of Indie Pogo, where every bounce unlocks a new mystery waiting to be discovered. Get ready to pogo your way through a mind\u2011blowing adventure that feels like a hidden treasure in a pixelated jungle.",
         "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/818210/header.jpg",
         "url": "https://store.steampowered.com/app/818210"
     },
     {
         "title": "Indie Dream",
-        "description": "Indie Dream is your passport to a hidden gem where every pixel whispers a new mystery, turning the ordinary into a living, breathing dreamscape. Dive in, uncover the secrets, and you\u2019ll find an addictive adventure that\u2019s too thrilling to keep to yourself\u2014share the wonder and watch the world awaken.",
+        "description": "Unlock the secrets of an unseen world in Indie Dream, where every choice unravels a story no one else has heard. Dive into this hidden gem that promises wonder, suspense, and a journey that rewrites your imagination.",
         "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/612060/header.jpg",
         "url": "https://store.steampowered.com/app/612060"
     },
     {
-        "title": "ATOM RPG: Post-apocalyptic indie game",
-        "description": "In a post\u2011apocalyptic world where the last atom of hope flickers in the dark, ATOM RPG invites you to rewrite destiny from the ashes of civilization\u2014every choice cracks the future like a crystal. With pulse\u2011shifting combat, mind\u2011bending mysteries, and a soundtrack that echoes through broken cities, this hidden gem turns survival into an artful rebellion.",
-        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/552620/header.jpg",
-        "url": "https://store.steampowered.com/app/552620"
-    },
-    {
         "title": "Super Indie Karts",
-        "description": "Uncover the secret lanes of Super\u202fIndie\u202fKarts, the hidden\u2011gem racer where every turn hides a new, pulse\u2011racing surprise. Strap in, race on, and let the mystery of the streets fuel your wildest speed dreams.",
+        "description": "Super Indie Karts is the hidden gem that turns every neon\u2011lit track into a pulse\u2011racing maze of secrets and speed\u2011bending shortcuts. Dive into the underground circuit now, unlock the unseen, and experience an adrenaline rush so electric it\u2019s whispered only by the bold.",
         "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/323670/header.jpg",
         "url": "https://store.steampowered.com/app/323670"
+    },
+    {
+        "title": "ATOM RPG: Post-apocalyptic indie game",
+        "description": "ATOM RPG: Post\u2011Apocalyptic Indie Game\u2014discover the hidden gem that rewrites the apocalypse, where every choice sparks a new pulse of hope. Dive into a neon\u2011scarred wasteland where atoms whisper secrets and only the bold can shape the world before the darkness claims all.",
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/552620/header.jpg",
+        "url": "https://store.steampowered.com/app/552620"
     }
 ]
