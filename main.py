@@ -5,50 +5,53 @@ import random
 from groq import Groq
 # Configuration
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
-# A list of high-value tags to ensure variety every day
 THEMES = [
     "Atmospheric", "Roguelike", "Metroidvania", "Puzzle", 
     "Psychological Horror", "Simulation", "Pixel Art", 
-    "Tactical", "Cyberpunk", "Cozy", "Surreal", "Dark Fantasy"
+    "Tactical", "Cyberpunk", "Cozy", "Surreal", "Dark Fantasy",
+    "Sci-Fi", "Adventure", "RPG", "Strategy"
 ]
 def fetch_hidden_gems():
-    # Pick a random theme for today
     today_theme = random.choice(THEMES)
-    print(f"Today's Theme: {today_theme} 💎")
-    print(f"Scanning Steam for {today_theme} hidden gems...")
+    print(f"Target Theme: {today_theme} 💎")
     
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
     }
     
-    # Search for the theme + 'indie' to keep the niche focus
-    search_term = f"{today_theme} indie"
-    search_url = f"https://store.steampowered.com/api/storesearch/?term={search_term}&l=english&cc=US"
+    # We define a list of search attempts from most specific to most general
+    search_attempts = [
+        f"{today_theme} indie", # Attempt 1: Specific theme + indie
+        today_theme,           # Attempt 2: Just the theme
+        "indie"                # Attempt 3: General indie fallback
+    ]
     
-    try:
-        response = requests.get(search_url, headers=headers)
-        response.raise_for_status()
-        data = response.json()
+    for attempt in search_attempts:
+        print(f"Trying search term: '{attempt}'...")
+        search_url = f"https://store.steampowered.com/api/storesearch/?term={attempt}&l=english&cc=US"
         
-        games = data.get("items", [])
-        if games:
-            print(f"Found {len(games)} potential gems for {today_theme}!")
-            return [{
-                "id": game["id"],
-                "title": game["name"],
-                "tags": [today_theme, "Indie"],
-                "rating": 0.90
-            } for game in games[:5]]
-        else:
-            print(f"No games found for theme: {today_theme}")
+        try:
+            response = requests.get(search_url, headers=headers)
+            response.raise_for_status()
+            data = response.json()
             
-    except Exception as e:
-        print(f"Error fetching from Steam: {e}")
-    
+            games = data.get("items", [])
+            if games and len(games) >= 3: # Only accept if we get at least 3 games
+                print(f"Success! Found {len(games)} games using '{attempt}'.")
+                return [{
+                    "id": game["id"],
+                    "title": game["name"],
+                    "tags": [today_theme, "Indie"],
+                    "rating": 0.90
+                } for game in games[:5]]
+            else:
+                print(f"Not enough games found for '{attempt}' ({len(games) if games else 0} found). Trying fallback...")
+        except Exception as e:
+            print(f"Error during search '{attempt}': {e}")
+            
     return []
 def get_ai_description(game):
     client = Groq(api_key=GROQ_API_KEY)
-    # The prompt now includes the theme for better, more tailored pitches
     theme = game['tags'][0]
     prompt = f"Write a 2-sentence viral marketing pitch for a 'Hidden Gem' game called {game['title']}. The theme is {theme}. Make it sound mysterious and exciting."
     
@@ -60,7 +63,7 @@ def get_ai_description(game):
 def main():
     gems = fetch_hidden_gems()
     if not gems:
-        print("No games found. Skipping update.")
+        print("Critical Error: No games found even after fallback. Skipping update.")
         return
     processed_games = []
     for gem in gems:
@@ -77,6 +80,6 @@ def main():
     
     with open('games.json', 'w') as f:
         json.dump(processed_games, f, indent=4)
-    print(f"Successfully updated games.json with {len(processed_games)} real {gems[0]['tags'][0]} games!")
+    print(f"Successfully updated games.json with {len(processed_games)} real games!")
 if __name__ == "__main__":
     main()
