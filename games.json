@@ -1,8 +1,20 @@
 [
     {
-        "title": "Data Drift: Cyberpunk Shooter Top Down indie action",
-        "description": "Dive into *Data Drift*, where neon alleys pulse with unseen data storms and every shot rewrites the city\u2019s digital fate\u2014an adrenaline\u2011charged, top\u2011down shooter that feels like hacking the very air you breathe. Uncover the hidden code of power\u2014one drift, one pulse, one legend\u2014and let your legend echo through the city\u2019s neon shadows.",
-        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/3544640/header.jpg",
-        "url": "https://store.steampowered.com/app/3544640"
+        "title": "Atmospheric Labyrinth",
+        "description": "Dive into the mist\u2011laden corridors of Atmospheric Labyrinth, where every step reshapes reality and whispers of hidden treasures echo through the shadows\u2014your mind will never be the same. Unravel the mystery, feel the pulse of the unseen, and discover a hidden gem that will haunt your dreams long after the game ends.",
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/4711150/header.jpg",
+        "url": "https://store.steampowered.com/app/4711150"
+    },
+    {
+        "title": "Cities: Skylines II - Atmospheric Piano Channel",
+        "description": "Unveil the city\u2019s silent symphony in **Cities: Skylines II \u2013 Atmospheric Piano Channel**, a hidden gem where every skyscraper echoes with a haunting, otherworldly rhythm that only the bold can hear. Step into the shadows, let the mysterious piano keys guide your metropolis, and discover a living masterpiece that turns each skyline into a spellbinding orchestral revelation.",
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/3055080/header.jpg",
+        "url": "https://store.steampowered.com/app/3055080"
+    },
+    {
+        "title": "Atmospheric Labyrinth Demo",
+        "description": "Dive into the mist\u2011shrouded corridors of Atmospheric Labyrinth Demo, where every echo tells a secret and every shadow hides a new world. Join the quest, uncover the hidden gem, and let the very air around you become the most thrilling ally.",
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/4905700/header.jpg",
+        "url": "https://store.steampowered.com/app/4905700"
     }
 ]
